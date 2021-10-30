@@ -2,3 +2,9 @@
     border-radius: 50%;
     width: 15%;
 }
+.custom-border{
+    border-bottom: 2px solid transparent;
+}
+.selected{
+   border-bottom: 2px solid rgb(255, 196, 3);
+}

@@ -10,6 +10,7 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import "./App.css";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import Profile from "./pages/Profile/Profile";
+import AddRides from "./pages/AddRides/AddRides";
 
 function App() {
   return (
@@ -25,6 +26,9 @@ function App() {
         <Route path="/rides">
           <Rides></Rides>
         </Route>
+        <Route path="/rides/:id">
+          <YourRides></YourRides>
+        </Route>
         <Route path="/visit">
           <Visit></Visit>
         </Route>
@@ -36,6 +40,9 @@ function App() {
         </Route>
         <Route path="/profile">
           <Profile></Profile>
+        </Route>
+        <Route path="/addrides">
+          <AddRides></AddRides>
         </Route>
         <Route exact path="*">
           <NotFound></NotFound>

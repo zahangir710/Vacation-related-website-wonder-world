@@ -1,9 +1,10 @@
 import React from "react";
 
+
 const Profile = () => {
   return (
-    <div>
-      <h1>This is Profile</h1>
+    <div className="container text-center">
+      <p>This is Profiel</p>
     </div>
   );
 };

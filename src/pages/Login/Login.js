@@ -9,6 +9,10 @@ const Login = () => {
       <Button onClick={googleSignIn} variant="outline-dark">
         Sign in with Google
       </Button>
+      <p>or</p>
+      <Button onClick={googleSignIn} variant="outline-dark">
+        Admin Login
+      </Button>
       <p>{error}</p>
       <p>{user?.displayName}</p>
       <p>{user?.email}</p>

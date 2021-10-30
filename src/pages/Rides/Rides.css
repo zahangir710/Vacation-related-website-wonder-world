@@ -1,0 +1,7 @@
+.rides-bg{
+    background:linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), 
+    url('https://i.ibb.co/tc5DpJs/kevin-jarrett-gn-TAg-Dzh-9k-unsplash.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
