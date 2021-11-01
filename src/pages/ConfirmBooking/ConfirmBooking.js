@@ -90,7 +90,7 @@ const ConfirmBooking = () => {
           <ListGroupItem>${totalPrice.toFixed(2)}</ListGroupItem>
         </ListGroup>
         <Card.Body>
-          <Card.Link href="#">
+          <Card.Link href="">
             <Button
               onClick={handleConfirmBooking}
               variant="warning"
@@ -99,7 +99,7 @@ const ConfirmBooking = () => {
               Confirm
             </Button>
           </Card.Link>
-          <Card.Link disabled href="#">
+          <Card.Link disabled href="">
             <Link to="/rides">
               <Button className="rounded bg-dark text-light" variant="dark">
                 Cancle

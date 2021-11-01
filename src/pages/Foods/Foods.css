@@ -1,0 +1,7 @@
+.food-div{
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+}
+.img-div img{
+    width: 100%;
+}
