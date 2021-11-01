@@ -19,7 +19,7 @@ const AddRides = () => {
   };
 
   return (
-    <div className="container mt-5 text-center">
+    <div className="container mt-5 text-center set-padding">
       <h1>Add Ride</h1>
       <form
         className="d-flex flex-column justify-content-center align-items-center ride-form"

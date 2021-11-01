@@ -11,7 +11,7 @@ const UpdateBooking = () => {
       });
   }, []);
   return (
-    <div className="container">
+    <div className="container pb-5">
       <h1 className="text-center">Update Booking</h1>
       <div className="display">
         {bookings.map((booking) => (

@@ -1,0 +1,15 @@
+.visit-bg{
+    background: linear-gradient(rgba(0, 0, 0, 0.507),rgba(0, 0, 0, 0.507)), url('https://i.ibb.co/NLBJrBv/perry-merrity-ii-Ok-NVRc8-Dq3w-unsplash.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.padding-text{
+    padding-left: 250px;
+    padding-right: 250px;
+    padding-top: 400px;
+}
+.opening-hours{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+}

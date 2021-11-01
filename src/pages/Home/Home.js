@@ -17,7 +17,7 @@ const Home = () => {
   }
 
   return (
-    <div>
+    <div className="pb-5">
       <div className="home-bg text-center text-light">
         <h1 className="text-warning">Wonder World</h1>
         <p>The Best Holiday Destination for your family</p>

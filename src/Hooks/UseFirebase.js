@@ -13,6 +13,7 @@ const auth = getAuth();
 const useFirebase = () => {
   const [user, setUser] = useState(null);
   const [isLoadding, setIsLoadding] = useState(true);
+  const [error, setError] = useState("");
 
   // Login Function
   const googleSignIn = () => {
@@ -20,6 +21,10 @@ const useFirebase = () => {
     signInWithPopup(auth, googleProvider)
       .then((result) => {
         setUser(result.user);
+        setError("");
+      })
+      .catch((error) => {
+        setError(error.message);
       })
       .finally(() => setIsLoadding(false));
   };
@@ -48,6 +53,7 @@ const useFirebase = () => {
   return {
     user,
     Logout,
+    error,
     isLoadding,
     googleSignIn,
   };
