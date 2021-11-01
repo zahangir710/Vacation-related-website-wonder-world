@@ -5,7 +5,7 @@ const useRidesData = () => {
   const [rides, setRides] = useState([]);
   useEffect(() => {
     setIsLoadding(true);
-    fetch("http://localhost:5000/services")
+    fetch("https://spooky-ghoul-71754.herokuapp.com/services")
       .then((res) => res.json())
       .then((data) => {
         setRides(data);

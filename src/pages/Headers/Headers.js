@@ -1,12 +1,13 @@
 import React from "react";
 import { Container, Nav, Navbar, NavDropdown } from "react-bootstrap";
 import { Link, NavLink } from "react-router-dom";
-import useFirebase from "../../Hooks/UseFirebase";
+import useAuth from "../../Hooks/useAuth";
+
 import Logo from "../../Images/logo.png";
 import "./Headers.css";
 
 const Headers = () => {
-  const { user, Logout } = useFirebase();
+  const { user, Logout } = useAuth();
 
   return (
     <Navbar collapseOnSelect expand="lg" bg="dark" variant="dark" sticky="top">
@@ -28,6 +29,9 @@ const Headers = () => {
             <Nav.Link as={NavLink} activeClassName="selected" to="/rides">
               Rides
             </Nav.Link>
+            <Nav.Link as={NavLink} activeClassName="selected" to="/myrides">
+              My Rides
+            </Nav.Link>
             <Nav.Link
               className="custom-border"
               activeClassName="selected"
@@ -36,20 +40,12 @@ const Headers = () => {
             >
               Plan Your Visit
             </Nav.Link>
-            <Nav.Link
-              className="custom-border"
-              activeClassName="selected"
-              as={NavLink}
-              to="/your_rides"
-            >
-              Your Rides
-            </Nav.Link>
             <NavDropdown title="Admin" id="navbarScrollingDropdown">
               <NavDropdown.Item as={Link} to="/addrides">
                 Add Rides
               </NavDropdown.Item>
               <NavDropdown.Divider />
-              <NavDropdown.Item as={Link} to="/update_orders">
+              <NavDropdown.Item as={Link} to="/update_booking">
                 Update booking
               </NavDropdown.Item>
             </NavDropdown>

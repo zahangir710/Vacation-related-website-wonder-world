@@ -7,13 +7,15 @@ const AddRides = () => {
   const { register, handleSubmit, reset } = useForm();
   const onSubmit = (data) => {
     console.log(data);
-    axios.post("http://localhost:5000/services", data).then((res) => {
-      console.log(res);
-      if (res.data.insertedId) {
-        alert("Added Successfully");
-        reset();
-      }
-    });
+    axios
+      .post("https://spooky-ghoul-71754.herokuapp.com/services", data)
+      .then((res) => {
+        console.log(res);
+        if (res.data.insertedId) {
+          alert("Added Successfully");
+          reset();
+        }
+      });
   };
 
   return (

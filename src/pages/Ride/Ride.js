@@ -1,5 +1,6 @@
 import React from "react";
 import { Button, Card } from "react-bootstrap";
+import { Link } from "react-router-dom";
 
 const Ride = (props) => {
   const { name, img, price, _id } = props.ride;
@@ -11,7 +12,9 @@ const Ride = (props) => {
         <Card.Text>
           <p>${price}</p>
         </Card.Text>
-        <Button variant="warning">Book Ticket</Button>
+        <Link to={`confirm_booking/${_id}`}>
+          <Button variant="warning">Book Ticket</Button>
+        </Link>
       </Card.Body>
     </Card>
   );

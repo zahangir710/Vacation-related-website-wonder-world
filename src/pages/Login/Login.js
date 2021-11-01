@@ -1,21 +1,28 @@
 import Button from "@restart/ui/esm/Button";
 import React from "react";
-import useFirebase from "../../Hooks/UseFirebase";
+import useAuth from "../../Hooks/useAuth";
+import "./Login.css";
 
 const Login = () => {
-  const { googleSignIn, user, error } = useFirebase();
+  const { googleSignIn } = useAuth();
+
   return (
-    <div className="container text-center mt-5">
-      <Button onClick={googleSignIn} variant="outline-dark">
+    <div className="container text-center padding">
+      <Button
+        className="rounded bg-warning mb-3"
+        onClick={googleSignIn}
+        variant="outline-dark"
+      >
         Sign in with Google
       </Button>
       <p>or</p>
-      <Button onClick={googleSignIn} variant="outline-dark">
+      <Button
+        className="rounded bg-success text-light"
+        onClick={googleSignIn}
+        variant="outline-dark"
+      >
         Admin Login
       </Button>
-      <p>{error}</p>
-      <p>{user?.displayName}</p>
-      <p>{user?.email}</p>
     </div>
   );
 };
